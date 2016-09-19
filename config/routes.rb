@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-resources :pictures, only: [:index, :new, :create]
+resources :pictures, only: [:index, :show, :new, :create, :edit, :update, :destroy]
 
 #get 'pictures' => 'pictures#index'
 

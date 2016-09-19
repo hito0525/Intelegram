@@ -3,7 +3,11 @@
 <% @pictures.each do |picture| %>
   <p>タイトル:<%= picture.title %></p>
   <p>本文:<%= simple_format (picture.content) %></p>
-<% end %>
+    <p><%= link_to "写真を編集する", edit_picture_path(picture.id) %></p>
+   <p><%= link_to '写真を削除する', picture_path(picture), method: :delete, data: { confirm: '本当に編集していいですか？' } %></p>
 
+
+
+<% end %>
 
 <%= link_to "ブログを作成する", new_picture_path %>
