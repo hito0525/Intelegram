@@ -1,10 +1,13 @@
+<h2><p><%= notice %></p></h2>
+
 <h1>ブログ一覧</h1>
 
 <% @pictures.each do |picture| %>
   <p>タイトル:<%= picture.title %></p>
   <p>本文:<%= simple_format (picture.content) %></p>
-    <p><%= link_to "写真を編集する", edit_picture_path(picture.id) %></p>
-   <p><%= link_to '写真を削除する', picture_path(picture), method: :delete, data: { confirm: '本当に編集していいですか？' } %></p>
+
+  <p><%= link_to "写真を編集する", edit_picture_path(picture.id) %></p>
+  <p><%= link_to '写真を削除する', picture_path(picture), method: :delete, data: { confirm: '本当に編集していいですか？' } %></p>
 
 
 

@@ -11,7 +11,7 @@ class PicturesController < ApplicationController
   def create
     Picture.create(pictures_params)
     #@picture = Picture.new(pictures_params)
-    redirect_to pictures_path
+    redirect_to pictures_path, notice: "写真投稿無事に完了しました！"
 
   end
 
@@ -30,7 +30,7 @@ class PicturesController < ApplicationController
   def destroy
     @picture = Picture.find(params[:id])
     @picture.destroy
-    redirect_to pictures_path
+    redirect_to pictures_path, notice: "写真を無事に削除しました！"
   end
 
 private
