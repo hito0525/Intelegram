@@ -25,10 +25,22 @@ class PicturesController < ApplicationController
   end
 
   def update
+     # edit, update, destroyで共通コード
     @picture = Picture.find(params[:id])
-    @picture = Picture.update(pictures_params)
-    redirect_to pictures_path
+
+    if @picture.update(pictures_params)
+      redirect_to pictures_path, notice: "写真を無事にUpdateしました！"
+    else
+      render action: 'edit'
+    end
+
+
+    # @picture = Picture.find(params[:id])
+    # @picture = Picture.update(pictures_params)
+    #redirect_to pictures_path, notice: "写真を無事にUpdateしました！"
   end
+
+
 
 
 
@@ -42,5 +54,7 @@ private
   def pictures_params
     params.require(:picture).permit(:title, :content)
   end
+
+
 
 end

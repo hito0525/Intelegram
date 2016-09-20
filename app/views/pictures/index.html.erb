@@ -7,7 +7,7 @@
   <p>本文:<%= simple_format (picture.content) %></p>
 
   <p><%= link_to "写真を編集する", edit_picture_path(picture.id) %></p>
-  <p><%= link_to '写真を削除する', picture_path(picture), method: :delete, data: { confirm: '本当に編集していいですか？' } %></p>
+  <p><%= link_to '写真を削除する', picture_path(picture), method: :delete, data: { confirm: '本当に削除していいですか？' } %></p>
 
 
 
