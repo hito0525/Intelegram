@@ -1,4 +1,7 @@
 class PicturesController < ApplicationController
+before_action :set_picture, only: [:edit, :update, :destroy]
+
+
   def index
     @pictures = Picture.all
   end
@@ -26,7 +29,7 @@ class PicturesController < ApplicationController
 
   def update
      # edit, update, destroyで共通コード
-    @picture = Picture.find(params[:id])
+    #@picture = Picture.find(params[:id])
 
     if @picture.update(pictures_params)
       redirect_to pictures_path, notice: "写真を無事にUpdateしました！"
@@ -45,7 +48,7 @@ class PicturesController < ApplicationController
 
 
   def destroy
-    @picture = Picture.find(params[:id])
+    #@picture = Picture.find(params[:id])
     @picture.destroy
     redirect_to pictures_path, notice: "写真を無事に削除しました！"
   end
@@ -55,6 +58,10 @@ private
     params.require(:picture).permit(:title, :content)
   end
 
+ # idをキーとして値を取得するメソッド
+    def set_picture
+      @picture = Picture.find(params[:id])
+    end
 
 
 end
