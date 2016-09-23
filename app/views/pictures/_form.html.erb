@@ -12,7 +12,7 @@
   <% end %>
 
 
-<%= form_for(@picture) do |f| %>
+<%= form_for(@picture, url: choose_new_or_edit) do |f| %>
 
   <%= f.label :title %>
   <%= f.text_field :title %>

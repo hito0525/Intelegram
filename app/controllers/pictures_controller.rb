@@ -7,9 +7,15 @@ before_action :set_picture, only: [:edit, :update, :destroy]
   end
 
   def new
-
+    if params[:back]
+    @picture = Picture.new(pictures_params)
+    else
     @picture = Picture.new
   end
+end
+
+
+
 
   def create
     #Picture.create(pictures_params)
@@ -44,14 +50,16 @@ before_action :set_picture, only: [:edit, :update, :destroy]
   end
 
 
-
-
-
   def destroy
     #@picture = Picture.find(params[:id])
     @picture.destroy
     redirect_to pictures_path, notice: "写真を無事に削除しました！"
   end
+
+  def confirm
+    @picture = Picture.new(pictures_params)
+  end
+
 
 private
   def pictures_params
