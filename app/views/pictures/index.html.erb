@@ -2,6 +2,8 @@
 
 <h1>ブログ一覧</h1>
 
+<%= link_to "ブログを作成する", new_picture_path %>
+
 <% @pictures.each do |picture| %>
   <p>タイトル:<%= picture.title %></p>
   <p>本文:<%= simple_format (picture.content) %></p>
