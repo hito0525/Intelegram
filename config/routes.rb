@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  devise_for :users
 resources :pictures, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
   collection do
       post :confirm

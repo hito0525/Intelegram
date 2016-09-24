@@ -55,6 +55,7 @@ gem 'twitter-bootstrap-rails'
 #javascript用gem
 gem 'jquery-turbolinks'
 
-
+#ログイン機能
+gem 'devise'
 
 
