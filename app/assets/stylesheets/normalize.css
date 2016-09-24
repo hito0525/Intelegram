@@ -417,13 +417,13 @@ textarea {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
-そして、htmlからnormalize.cssを呼び出します。
 
-index.html
+image{
+    max-width: 100%;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Intelegram</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
-</head>
+.prof-img{
+  max-width: 10%;
+}
+
+
