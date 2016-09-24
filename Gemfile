@@ -50,3 +50,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #Bootstrap用
 gem 'twitter-bootstrap-rails'
 
+#javascript用gem
+gem 'jquery-turbolinks'
+
+
+
+
