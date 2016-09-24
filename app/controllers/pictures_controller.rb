@@ -4,6 +4,7 @@ before_action :set_picture, only: [:edit, :update, :destroy]
 
   def index
     @pictures = Picture.all
+    @pictures = Picture.order(:created_at).reverse_order
   end
 
   def new
