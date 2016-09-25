@@ -59,7 +59,7 @@ gem 'jquery-turbolinks'
 gem 'devise'
 
 #ダミーデータ用
-#gem 'faker'
+gem 'faker'
 
 
 
