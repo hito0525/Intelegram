@@ -58,4 +58,12 @@ gem 'jquery-turbolinks'
 #ログイン機能
 gem 'devise'
 
+#ダミーデータ用
+#gem 'faker'
+
+
+
+
+
+
 
