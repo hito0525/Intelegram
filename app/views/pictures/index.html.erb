@@ -8,6 +8,8 @@
 
 <% @pictures.each do |picture| %>
  <div class="row">
+ <p>投稿者ID:<%= picture.user.id if picture.user %></p>
+ <p>投稿者:<%= picture.user.name if picture.user %></p>
   <p>タイトル:<%= picture.title %></p>
   <p>本文:<%= simple_format (picture.content) %></p>
 
@@ -15,10 +17,10 @@
 
 
  <%= link_to '写真を削除する', picture_path(picture), method: :delete, data: { confirm: '本当に削除していいですか？' } , class: 'btn btn-default btn-sm btn btn-danger' %>
+
 </div>
-
-
 <% end %>
+
 
 <%= link_to "写真を作成する", new_picture_path , class: 'btn btn-default'%>
 </div>
