@@ -20,16 +20,13 @@ end
 
 
   def create
-    #Picture.create(pictures_params)
     @picture = Picture.new(pictures_params)
-    #current_user.idとすれば、user_idを取得できる
     @picture.user_id = current_user.id
     if @picture.save
-    #覧画面へ遷移して"写真投稿無事に完了しました！"とメッセージを表示します。
-    redirect_to pictures_path, notice: "写真投稿無事に完了しました！"
+      redirect_to pictures_path, notice: "写真を投稿しました！"
+      NoticeMailer.sendmail_picture(@picture).deliver
     else
-    #上記登録できなかったら、入力フォームに再び戻る
-    render action: 'new'
+      render action: 'new'
     end
   end
 

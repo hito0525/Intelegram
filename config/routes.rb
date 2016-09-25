@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-
-  devise_for :users
+devise_for :users
 resources :pictures, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
   collection do
       post :confirm
@@ -9,6 +8,12 @@ resources :pictures, only: [:index, :show, :new, :create, :edit, :update, :destr
   end
 
 root 'top#index'
+
+
+# if Rails.env.development?
+#   mount LetterOpenerWeb::Engine, at: "/letter_opener"
+# end
+
 
 #get 'pictures' => 'pictures#index'
 
