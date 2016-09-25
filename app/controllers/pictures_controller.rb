@@ -1,12 +1,16 @@
 class PicturesController < ApplicationController
 before_action :authenticate_user!
-before_action :set_picture, only: [:edit, :update, :destroy]
+before_action :set_picture, only: [:show,:edit, :update, :destroy]
 
 
   def index
     @pictures = Picture.all
     @pictures = Picture.order(:created_at).reverse_order
   end
+
+  def show
+  end
+
 
   def new
     if params[:back]
