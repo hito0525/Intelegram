@@ -67,7 +67,7 @@ gem 'faker'
 #管理画面を作成するgem
 gem 'therubyracer', platforms: :ruby
 gem 'rails_admin'
-
+gem 'cancan'
 
 
 
