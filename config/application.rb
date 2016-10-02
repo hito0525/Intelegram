@@ -14,6 +14,6 @@ module Intelegram
     config.active_record.raise_in_transactional_callbacks = true
     config.i18n.default_locale = :ja
 
-    config.action_view.field_error_proc = proc { |html_tag, instance| html_tag }
+    config.action_view.field_error_proc = proc  { |html_tag, _| html_tag }
   end
 end
