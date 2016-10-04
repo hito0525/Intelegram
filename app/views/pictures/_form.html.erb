@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
-<%= f.error_messages! %>
-
-
 
 <%= form_for(@picture, url: choose_new_or_edit) do |f| %>
+
+<%= f.error_messages! %>
 
   <%= f.label :タイトル %>
   <%= f.text_field :title, class: 'form-control' %>
