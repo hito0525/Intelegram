@@ -1,5 +1,5 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
-  def facebook
+
     def facebook
     @user = User.find_for_facebook_oauth(request.env["omniauth.auth"], current_user)
 
@@ -11,7 +11,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       redirect_to new_user_registration_url
     end
   end
-end
 
 def twitter
     # You need to implement the method below in your model

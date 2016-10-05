@@ -3,7 +3,8 @@ class ApplicationController < ActionController::Base
   # before_actionで下で定義したメソッドを実行
   before_action :configure_permitted_parameters, if: :devise_controller?
   #変数PERMISSIBLE_ATTRIBUTESに配列[:name]を代入
-  PERMISSIBLE_ATTRIBUTES = %i(name)
+  PERMISSIBLE_ATTRIBUTES = %i(name avatar avatar_cache)
+
 
 #CanCan::AccessDeniedというエラーが発生した場合、トップページにリダイレクトするようにする
   rescue_from CanCan::AccessDenied do |exception|

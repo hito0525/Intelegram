@@ -11,6 +11,7 @@
 
  <p>投稿者ID:<%= picture.user.id if picture.user %></p>
  <p>投稿者:<%= picture.user.name if picture.user %></p>
+ <p><%= profile_img(picture.user) %></p>
   <p>タイトル:<%= picture.title %></p>
   <p>本文:<%= simple_format (picture.content) %></p>
 
