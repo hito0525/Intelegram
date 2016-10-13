@@ -71,7 +71,7 @@ end
 
 private
   def pictures_params
-    params.require(:picture).permit(:title, :content)
+    params.require(:picture).permit(:title, :content, :image, :image_cache)
   end
 
  # idをキーとして値を取得するメソッド
