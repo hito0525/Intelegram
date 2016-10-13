@@ -64,8 +64,6 @@ end
   def confirm
     @picture = Picture.new(pictures_params)
     render :new if @picture.invalid?
-
-
   end
 
 
